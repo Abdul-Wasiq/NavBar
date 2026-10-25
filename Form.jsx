@@ -1,6 +1,6 @@
 // 1. Cannot be empty:
 
-js
+
 if (!formData.name) {
     setError('Name cannot be empty')
     return
@@ -8,7 +8,7 @@ if (!formData.name) {
 
 // 2. Minimum length:
 
-js
+ 
 if (formData.password.length < 8) {
     setError('Password must be at least 8 characters')
     return
@@ -16,7 +16,7 @@ if (formData.password.length < 8) {
 
 // 3. Must contain uppercase:
 
-js
+ 
 if (!/[A-Z]/.test(formData.password)) {
     setError('Password must have at least one uppercase letter')
     return
@@ -24,7 +24,7 @@ if (!/[A-Z]/.test(formData.password)) {
 
 // 4. Must contain a number:
 
-js
+ 
 if (!/[0-9]/.test(formData.password)) {
     setError('Password must have at least one number')
     return
@@ -32,7 +32,7 @@ if (!/[0-9]/.test(formData.password)) {
 
 // 5. Must contain special character:
 
-js
+ 
 if (!/[!@#$%^&*]/.test(formData.password)) {
     setError('Password must have at least one special character')
     return
@@ -40,7 +40,7 @@ if (!/[!@#$%^&*]/.test(formData.password)) {
 
 // 6. Email must have @ and . :
 
-js
+ 
 if (!formData.email.includes('@') || !formData.email.includes('.')) {
     setError('Please enter a valid email')
     return
@@ -48,7 +48,7 @@ if (!formData.email.includes('@') || !formData.email.includes('.')) {
 
 // 7. Year must be 4 digits:
 
-js
+ 
 if (formData.year.length !== 4) {
     setError('Year must be 4 digits')
     return
@@ -56,7 +56,7 @@ if (formData.year.length !== 4) {
 
 // 8. Year cannot be in future:
 
-js
+ 
 if (parseInt(formData.year) > new Date().getFullYear()) {
     setError('Year cannot be in the future')
     return
@@ -64,7 +64,7 @@ if (parseInt(formData.year) > new Date().getFullYear()) {
 
 // 9. Must be a number:
 
-js
+ 
 if (isNaN(formData.year)) {
     setError('Year must be a number')
     return
@@ -72,7 +72,7 @@ if (isNaN(formData.year)) {
 
 // 10. Phone must be 11 digits:
 
-js
+ 
 if (formData.phone.length !== 11) {
     setError('Phone must be 11 digits')
     return
